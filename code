@@ -1,0 +1,57 @@
+
+        <div class="content">
+         <h1><?php echo $title; ?></h1>
+        <?php echo $message; ?>
+        <form method="post" action="<?php echo $action; ?>">
+        <div class="data">
+		
+        <table>
+              <input type="hidden" name="Emp_ID" class="text" value="<?php echo $this->validation->Emp_ID; ?>"/>
+            <tr>
+	<td valign="top">Employee code<span style="color:Red;">*</span></td>
+
+<td><input type="Text" name="Emp_Code" value="<?php echo $this->validation->Emp_Code; ?>"/></td></tr>
+<tr>
+<td valign="top">Employee Name<span style="color:red;">*</span></td>
+<td><input type="Text" name="Emp_Name" value="<?php echo $this->validation->Emp_Name; ?>"/></td></tr>
+<tr>
+	<td valign="top">Qualification<span style="color:red;">*</span></td>
+	<td><input type="Text" name="Qualifications" value="<?php echo $this->validation->Qualifications; ?>"/></td></tr>
+	<tr>
+	<td valign="top">Designation<span style="color:red;">*</span></td>
+	<td><input type="Text" name="Designation" value="<?php echo $this->validation->Designation; ?>"/></td></tr>
+	<tr>
+	<td valign="top">DOB<span style="color:red;">*</span></td>
+	<td><input type="Date" name="DOB" value="<?php echo $this->validation->DOB; ?>"/></td></tr>
+	<tr>
+	<td valign="top">Email ID<span style="color:red;">*</span></td>
+	<td><input type="Text" name="Email_ID" value="<?php echo $this->validation->Email_ID; ?>"/></td></tr>
+	<tr>
+	<td valign="top">Date Of Joining<span style="color:red;">*</span></td>
+		<td><input type="date" name="Date_Of_Joining" value="<?php echo $this->validation->Date_Of_Joining; ?>"/></td></tr>
+	<tr>
+	<td valign="top">Contact Number<span style="color:red;">*</span></td>
+	<td><input type="Text" name="Contact_Number" value="<?php echo $this->validation->Contact_Number; ?>"/></td></tr>
+	<tr>
+	<td valign="top">Emergency Contact Number<span style="color:red;">*</span></td>
+	<td><input type="Text" name="Emergency_Contact_Number" value="<?php echo $this->validation->Emergency_Contact_Number; ?>"/></td></tr>
+	<tr>
+	<td valign="top">Marital Status<span style="color:red;">*</span></td>
+	<td>
+<?php echo form_radio('Marital_Status', 'Single', ($this->validation->Marital_Status == 'Single'),'') ?> Single
+            <?php echo form_radio('Marital_Status', 'Married', ($this->validation->Marital_Status == 'Married'),'') ?>Married
+	
+	<tr>
+	<td valign="top">Gender<span style="color:red;">*</span></td>
+<td>
+<?php echo form_radio('gender', 'male', ($this->validation->gender == 'male'),'') ?> Male
+            <?php echo form_radio('gender', 'female', ($this->validation->gender == 'female'),'') ?> Female
+</td>
+		    <td><input type="submit" value="Save"/></td></tr>
+            </tr>
+        </table>
+        </div>
+        </form>
+        <br />
+        <?php echo $link_back; ?>
+    </div>
